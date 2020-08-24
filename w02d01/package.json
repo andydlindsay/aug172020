@@ -1,0 +1,20 @@
+{
+  "name": "w02d01",
+  "version": "1.0.0",
+  "description": "Lecture notes and example code for W2D1 lecture",
+  "main": "sayhello-test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mocha",
+    "chai",
+    "testing",
+    "tdd"
+  ],
+  "author": "Andy Lindsay",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^8.1.1"
+  }
+}
