@@ -3,8 +3,8 @@
 ### To Do
 * [x] Blocking Code
 * [x] Asynchronous Programming
-* [ ] `setTimeout` and `setInterval`
-* [ ] File System Functions (`fs`)
+* [x] `setTimeout` and `setInterval`
+* [x] File System Functions (`fs`)
 
 
 
