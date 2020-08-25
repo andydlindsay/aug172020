@@ -16,7 +16,18 @@
  *    0
  */
 const min = function(arr) {
+  let minimumValue = Infinity;
 
+  // iterate through array
+  for (const num of arr) {
+    // compare each element against minimumValue
+    if (num < minimumValue) {
+      // if smaller, replace minimumValue with element
+      minimumValue = num;
+    }
+  }
+
+  return minimumValue;
 };
 
 
@@ -32,7 +43,15 @@ const min = function(arr) {
  *    9
  */
 const max = function(arr) {
+  let maximumValue = -Infinity;
 
+  for (const num of arr) {
+    if (num > maximumValue) {
+      maximumValue = num;
+    }
+  }
+
+  return maximumValue;
 };
 
 /* ===========================================================================
@@ -47,7 +66,9 @@ const max = function(arr) {
  *    9
  */
 const range = function(arr) {
-
+  const minimum = min(arr);
+  const maximum = max(arr);
+  return maximum - minimum;
 };
 
 // Don't change below:
