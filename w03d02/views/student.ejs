@@ -10,5 +10,18 @@
   <h1>My favourite student</h1>
 
   <h2><%= student.name %> is in year <%= student.year %> and belongs to <%= student.house %><h2>
+
+  <form method="POST" action="/students/<%= studentId %>">
+    <label>Set year: </label>
+    <input 
+      type="number"
+      name="student-year"
+    />
+    <button type="submit">Submit</button>
+  </form>
+
+  <form method="POST" action="/students/<%= studentId %>/delete">
+    <button type="submit">Delete Student</button>
+  </form>
 </body>
 </html>

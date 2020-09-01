@@ -19,13 +19,25 @@ const studentDatabase = {
   }
 };
 
+let id = 2;
+
+const getNextId = () => {
+  id++;
+  return id;
+};
+
 app.use(morgan('dev'));
+app.use(express.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
 
 // Browse
 app.get('/students', (req, res) => {
   const templateVars = { students: studentDatabase };
   res.render('students', templateVars);
+});
+
+app.get('/students/new', (req, res) => {
+  res.render('new-student-form');
 });
 
 // Read
@@ -36,9 +48,41 @@ app.get('/students/:student_id', (req, res) => {
   // if (!student) {
   //   res.render('error', errorObj)
   // }
-  
-  const templateVars = { student };
+
+  const templateVars = { student, studentId };
   res.render('student', templateVars);
+});
+
+// Delete
+app.post('/students/:student_id/delete', (req, res) => {
+  const studentId = req.params.student_id;
+  delete studentDatabase[studentId];
+
+  res.redirect('/students');
+});
+
+// Edit
+app.post('/students/:student_id', (req, res) => {
+  const year = req.body['student-year'];
+  const studentId = req.params.student_id;
+
+  studentDatabase[studentId].year = year;
+
+  res.redirect(`/students/${studentId}`);
+});
+
+// Add
+app.post('/students', (req, res) => {
+  const newStudent = {
+    name: req.body.studentName,
+    house: req.body.studentHouse,
+    year: req.body.studentYear
+  };
+  const newStudentId = getNextId();
+
+  studentDatabase[newStudentId] = newStudent;
+
+  res.redirect('/students');
 });
 
 app.get('/', (req, res) => {
