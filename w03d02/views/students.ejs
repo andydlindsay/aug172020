@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students</title>
+</head>
+<body>
+  <h1>All the Students!</h1>
+
+  <% for (const studentId in students) { %>
+    <div class="student">
+      <h2>
+        Student name: 
+        <a href="/students/<%= studentId %>">
+          <%= students[studentId].name %>
+        </a>
+      </h2>
+    </div>
+  <% } %>
+
+</body>
+</html>

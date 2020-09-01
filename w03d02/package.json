@@ -1,0 +1,18 @@
+{
+  "name": "w03d02",
+  "version": "1.0.0",
+  "description": "### To Do - [ ] Implement CRUD over HTTP with Express - [ ] Render data for the user using EJS templates - [ ] Use forms to submit HTTP requests - [ ] Explore the Post-Redirect-Get pattern - [ ] Using Chrome DevTools to see requests and responses - [ ] Practice debugging Express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
