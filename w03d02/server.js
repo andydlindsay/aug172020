@@ -19,8 +19,8 @@ const studentDatabase = {
   }
 };
 
+// generate id's
 let id = 2;
-
 const getNextId = () => {
   id++;
   return id;
@@ -36,6 +36,7 @@ app.get('/students', (req, res) => {
   res.render('students', templateVars);
 });
 
+// new student form
 app.get('/students/new', (req, res) => {
   res.render('new-student-form');
 });
