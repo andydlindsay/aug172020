@@ -1,0 +1,18 @@
+{
+  "name": "w03d03",
+  "version": "1.0.0",
+  "description": "### To Do - [ ] HTTP and cookies - [ ] Render pages differently based on language preference - [ ] Register user with email and password",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
