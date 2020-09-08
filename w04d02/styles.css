@@ -1,0 +1,12 @@
+h1 {
+  color: darkmagenta;
+  text-decoration: underline;
+  text-align: center;
+}
+
+/* ul {} */
+/* .content ul {} */
+ul#main-list {
+  border: 2px solid fuchsia;
+  border-radius: 15px;
+}
