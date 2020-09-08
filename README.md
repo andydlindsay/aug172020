@@ -7,3 +7,4 @@
 * [BREAKOUT - Mock Exam Review](https://github.com/andydlindsay/aug172020/tree/master/breakout-mock-exam-review)
 * [W03D02 - CRUD with Express](https://github.com/andydlindsay/aug172020/tree/master/w03d02)
 * [W03D03 - HTTP Cookies & User Authentication](https://github.com/andydlindsay/aug172020/tree/master/w03d03)
+* [W04D02 - Client Side JavaScript & jQuery](https://github.com/andydlindsay/aug172020/tree/master/w04d02)
