@@ -11,6 +11,20 @@
 <body>
   <h1>Fun with AJAX!</h1>
   <button type="button" id="fetch-posts">Fetch the posts!</button>
+
+  <form id="new-post">
+    <label>Title</label>
+    <input type="text" name="title" id="title" />
+    <br/>
+    <label>Content</label>
+    <input type="text" name="content" id="content" />
+    <br/>
+    <label>Author ID</label>
+    <input type="number" name="authorId" id="authorId" />
+    <br/>
+    <button type="submit">Create new post!</button>
+  </form>
+
   <div id="posts"></div>
   <div id="users"></div>
 

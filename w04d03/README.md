@@ -5,13 +5,16 @@
 - [x] XMLHttpRequest (XHR) Object
 - [x] Use AJAX to retrieve data from a server
 - [x] Use jQuery to update the DOM with the retrieved data
-- [ ] Use AJAX to submit data to a server
-- [ ] All without refreshing the browser
+- [x] Use AJAX to submit data to a server
+- [x] All without refreshing the browser
 
 ### AJAX
 * Asynchronous JS and XML - AJAJ
 * Used to retrieve information/data - making HTTP requests
 * Outlook
+
+
+http://localhost:789/?title=My+New+Title&content=Something+profound&authorId=3
 
 <username>jstamos</username>
 
