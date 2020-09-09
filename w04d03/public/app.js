@@ -62,7 +62,7 @@ $(() => {
         fetchPosts();
 
         // clear the input fields of the form
-        $(that).children('input').val('');
+        $(this).children('input').val('');
         // $('#title').val('');
         // $('#content').val('');
         // $('#authorId').val('');
