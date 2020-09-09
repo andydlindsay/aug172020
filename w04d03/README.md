@@ -9,44 +9,49 @@
 - [x] All without refreshing the browser
 
 ### AJAX
-* Asynchronous JS and XML - AJAJ
-* Used to retrieve information/data - making HTTP requests
-* Outlook
+* **A**synchronous **J**avaScript **A**nd **X**ML
+* Invented by Microsoft for Outlook Web Access as a way of replicating desktop application functionality in the browser
+* Thanks to AJAX, web applications can send and receive data asynchronously without requiring a browser refresh
+* The widespread use of AJAX was one of the factors that led to Web 2.0
+* Originally retrieved data sent using `XML`, but modern applications use `JSON` instead
 
+### XMLHttpRequest Object
+* AJAX is implemented using the `XMLHttpRequest` (`XHR`) object
+* Modern libraries (such as `jQuery` or `axios`) provide us with easy-to-use wrappers for the `XHR` object
 
-http://localhost:789/?title=My+New+Title&content=Something+profound&authorId=3
+### jQuery AJAX
+* jQuery gives us an API for making AJAX requests
 
-<username>jstamos</username>
+```js
+$.ajax({
+  url: 'https://jsonplaceholder.typicode.com/posts',
+  method: 'GET',
+  dataType: 'json',
+  success: (data) => {
+    console.log('this request succeeded and here\'s the data', data);
+  },
+  error: (error) => {
+    console.log('this request failed and this was the error', error);
+  }
+});
+```
 
-{
-  "username": "jstamos"
-}
+### jQuery Shorthand Methods
+* jQuery has several shorthand methods so that we don't have to use the full `.ajax` method every time
 
+```js
+// make a get request to the specified endpoint
+$.get('https://jsonplaceholder.typicode.com/posts');
 
-### Server Endpoints
-* GET   /api/posts
-* GET   /api/posts/:id
-* POST  /api/posts
-* PUT   /api/posts/:id
+// make a get request for JSON data
+$.getJSON('https://jsonplaceholder.typicode.com/posts');
 
-* GET   /api/users
-* GET   /api/users/:id
-* POST  /api/users
-* PUT   /api/posts/:id
+// make a post request
+$.post('https://jsonplaceholder.typicode.com/posts', { /* form data */ });
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 
+### Useful Links
+* [Blog post coining AJAX](https://web.archive.org/web/20160305044414/http://adaptivepath.org/ideas/ajax-new-approach-web-applications/)
+* [Wikipedia: AJAX](https://en.wikipedia.org/wiki/Ajax_(programming))
+* [MDN: XMLHttpRequest (XHR)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
+* jQuery [AJAX](http://api.jquery.com/jquery.ajax/), [getJSON](https://api.jquery.com/jquery.getjson/), and [post](https://api.jquery.com/jquery.post/) methods
