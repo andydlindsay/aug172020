@@ -1,8 +1,8 @@
 # Posts API
 
-**GET** `/api/posts`
-  ### Example body: none  
-  ### Example response:
+### **GET** `/api/posts`
+  #### Example body: none  
+  #### Example response:
   ```json
   {
     "1": {
