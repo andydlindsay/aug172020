@@ -8,11 +8,16 @@
 - [ ] Use AJAX to submit data to a server
 - [ ] All without refreshing the browser
 
+### Server Endpoints
+* GET   /api/posts
+* GET   /api/posts/:id
+* POST  /api/posts
+* PUT   /api/posts/:id
 
-
-
-
-
+* GET   /api/users
+* GET   /api/users/:id
+* POST  /api/users
+* PUT   /api/posts/:id
 
 
 
