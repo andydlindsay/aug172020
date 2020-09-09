@@ -17,7 +17,7 @@ app.get('/api/posts', (req, res) => {
   res.json(posts);
 });
 
-// retrieve the post that matches the provided id
+// retrieve a post
 app.get('/api/posts/:id', (req, res) => {
   res.json(posts[req.params.id]);
 });
@@ -27,7 +27,7 @@ app.get('/api/users', (req, res) => {
   res.json(users);
 });
 
-// retrieve the user that matches the provided id
+// retrieve a user
 app.get('/api/users/:id', (req, res) => {
   res.json(users[req.params.id]);
 });
