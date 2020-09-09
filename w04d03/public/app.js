@@ -1,12 +1,12 @@
 $(() => {
 
   const fetchPosts = () => {
+    // make a GET request to `/api/posts`
     $.ajax({
       url: '/api/posts',
       method: 'GET',
       dataType: 'json',
       success: (posts) => {
-        console.log(posts);
         renderPosts(posts);
       },
       error: (error) => {
@@ -46,24 +46,23 @@ $(() => {
   };
 
   const $postForm = $('#new-post');
-  // $postForm.submit(() => {});
+
   $postForm.on('submit', function (event) {
+    // prevent the default browser behaviour
     event.preventDefault();
 
-    // console.log(event);
+    // serialize the form data for submission to the server
     const serializedData = $(this).serialize();
-    // const serializedData = $(event.target).serialize();
-    // const serializedData = $postForm.serialize();
-
     console.log(serializedData);
-    // submit data to the server
+
+    // submit serialized data to the server via a POST request to `/api/posts`
     $.post('/api/posts', serializedData)
       .then((response) => {
         console.log(response);
         fetchPosts();
 
+        // clear the input fields of the form
         $(that).children('input').val('');
-
         // $('#title').val('');
         // $('#content').val('');
         // $('#authorId').val('');
