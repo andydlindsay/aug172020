@@ -9,3 +9,6 @@
 * [W03D03 - HTTP Cookies & User Authentication](https://github.com/andydlindsay/aug172020/tree/master/w03d03)
 * [W04D02 - Client Side JavaScript & jQuery](https://github.com/andydlindsay/aug172020/tree/master/w04d02)
 * [W04D03 - AJAX](https://github.com/andydlindsay/aug172020/tree/master/w04d03)
+* [W5D1 - SQL Intro](https://github.com/andydlindsay/aug172020/tree/master/w05d01)
+* [W05D02 - Database Design](https://github.com/andydlindsay/aug172020/tree/master/w05d02)
+* [W05D03 - SQL from our Apps](https://github.com/andydlindsay/aug172020/tree/master/w05d03)
