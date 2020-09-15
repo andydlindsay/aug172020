@@ -10,42 +10,61 @@
 - [x] Breakout: Convert 2 Spreadsheets [15 mins]
 - [x] Student Suggestion ERD(s)
 
-### Primary Key/FK
-* uniquely identify a record
-* can be any data type - combination of fields
-* autoincrementing primary key (serial)
-* FK - have to be the same data type as the PK
+### Primary Key
+
+- A way of uniquely identifying a particular record within a table 
+- Must be unique (within the table) and can never be null
+- The usual data type is auto-incrementing integer (`INTEGER` or `BIGINT`)
+- A Primary Key stored in another table is known as a `Foreign Key`
+- The Primary Key and Foreign Key **MUST** be the same data type
 
 ### Naming Conventions
-* table names and field names are lowercase / snake_case
-* table names are always plural
-* primary keys === id
-* foreign keys === users `user_id` `tweet_id`
+
+- Table and field names are written in `snake_case`
+- Table names are always pluralized
+- The primary key for each table will simply be called `id`
+- A foreign key is made up of the singular of the primary keys table and the suffix `_id` (eg. `user_id` is the foreign key for the `id` field in the `users` table)
 
 ### Data Types
-* Each field must have a data type declared
-* On record creation, the db sets aside room in memory for every field
-* This used to be a BIG concern - no longer cuz data is CHEAP
-* varchar(15), int, bigint, boolean, JSON, text
-* postal_codes, phone_numbers => varchar/char/string
 
-### Relationships
-* One-to-one - 1 record in the 1st table is related to only 1 record in the 2nd
-* One-to-many - 1 record in the 1st table is related to 1 or more records in the 2nd
-* Many-to-many - 1 or more records in the 1st table are related to 1 or more records in the 2nd table (need a third table join/junction/bridging)
+- Each field in a table **must** have a data type defined for it
+- The data type tells the database how much room to set aside to store the value _and_ allows the database to perform type validation on data before insertion (to protect the data integrity of the table)
+- Choosing the perfect data type is less of a concern nowadays because memory is now comparably cheap
+
+### Relationship Types
+
+- **One-to-One**: One record in the first table is related to one (and only one) record in the second table
+- **One-to-Many**: One record in the first table is related to one or more records in the second table
+- **Many-to-Many**: One or more records in the first table are related to one or more records in the second table
+
+- It could be argued that there is really only one relationship type: _One-to-Many_ as One-to-One's are extremely rare and Many-to-Many's are implemented using two _One-to-Many's_
 
 ### Design Concepts
-* Required - initial state of the record is
-* Default values - use intelligent defaults (timestamp => NOW())
-* Don't use calculated fields - value can be derived from one or more other fields (full_name = first_name + ' ' + last_name): single source of truth
-* Try not to delete anything - `active` boolean => default to true
 
+- Make fields required based on the records state upon initial creation (remember that additional data can be added to a record after it has been created)
+- Intelligent default values can be set for fields (such as the current timestamp for a `created_on` field)
+- Don't use calculated fields (a field that can be derived from one or more other fields, such as `full_name` is a combination of `first_name` and `last_name`)
+- Pull repeated values out to their own table and make reference to them with a foreign key
+- Try not to delete anything (use a boolean flag instead to mark a record as active or inactive)
+- Consider using a `type` field instead of using two (or more) tables to store very similar data (eg. create an `orders` table with an `order_type` field instead of a `purchase_orders` and a `sales_orders` table)
 
+### Entity Relationship Diagram (ERD)
 
-
-
-
-
+- A visual depiction of the database tables and how they are related to each other
+- Extremely useful for reasoning about how the database should be structured
+- Can be created using pen and paper, a whiteboard, or using an online application
 
 ### Breakout: Convert Two Spreadsheets
 - [Gist with instruction](https://gist.github.com/andydlindsay/20e7305e853bad7b587f294b054cf8de)
+
+### Student Suggestion: Uber/Ride Hailing
+We created an ERD for a fictional Uber competitor:
+
+![Uber](https://andydlindsay-portfolio.s3.amazonaws.com/lighthouse/uber.png)
+
+### Useful Links
+* [Database Normalization](https://en.wikipedia.org/wiki/Database_normalization)
+* [Postgres Data Types](http://www.postgresqltutorial.com/postgresql-data-types/)
+* [Relationship Types](http://etutorials.org/SQL/Database+design+for+mere+mortals/Part+II+The+Design+Process/Chapter+10.+Table+Relationships/Types+of+Relationships/)
+* [draw.io (online ERD)](https://www.draw.io/)
+* [DBeaver](https://dbeaver.io/)
