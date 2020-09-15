@@ -57,10 +57,8 @@
 ### Breakout: Convert Two Spreadsheets
 - [Gist with instruction](https://gist.github.com/andydlindsay/20e7305e853bad7b587f294b054cf8de)
 
-### Student Suggestion: Uber/Ride Hailing
-We created an ERD for a fictional Uber competitor:
-
-![Uber](https://andydlindsay-portfolio.s3.amazonaws.com/lighthouse/uber.png)
+### Student Suggestion: Comic Book Store
+![Comic Book Store](https://raw.githubusercontent.com/andydlindsay/aug172020/master/w05d02/retail.png)
 
 ### Useful Links
 * [Database Normalization](https://en.wikipedia.org/wiki/Database_normalization)
