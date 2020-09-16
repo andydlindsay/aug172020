@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All the Cats</title>
+</head>
+<body>
+  <h1>CATS!!!</h1>
+
+  <% for (const cat of cats) { %>
+    <div>
+      <h2>Name: <%= cat.name %> (<%= cat.id %>)</h2>
+      <h3>Breed: <%= cat.breed %></h3>
+    </div>
+  <% } %>
+</body>
+</html>
