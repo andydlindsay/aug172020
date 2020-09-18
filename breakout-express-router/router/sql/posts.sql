@@ -1,11 +1,11 @@
 DROP TABLE IF EXISTS posts;
 
 CREATE TABLE posts (
-	id SERIAL PRIMARY KEY,
-	user_id INT,
+  id SERIAL PRIMARY KEY,
+  user_id INT,
   FOREIGN KEY(user_id) REFERENCES users(id),
-	title VARCHAR(255),
-	content TEXT
+  title VARCHAR(255),
+  content TEXT
 );
 
 INSERT INTO posts
