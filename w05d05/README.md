@@ -53,11 +53,62 @@ D DELETE /resources/:id
 * pen and paper
 * figma
 
+### User Login
+* Don't do it
+
+/login/7
+/login/12
+
+```js
+app.get('/login/:id', (req, res) => {
+  req.session.user_id = req.params.id;
+  res.redirect('/');
+});
+```
+
+### Tech Choices
+* BE === Node/Express/Postgres
+* FE === HTML/CSS/JS/jQuery/Bootstrap/Flexbox/SCSS
 
 
+### SPA vs Multi-page
+* Not mutually exclusive
 
+### Git
+* Use branches
+* I WILL NOT CODE ON MASTER
+* Choose where the merges happen (locally or in the cloud)
 
+* Work on your branch
 
+* Save your branch (commit)
+* Checkout master
+* Pull latest
+* Checkout branch
+* Merge master into branch
+
+git push origin master
+git push origin my-branch
+
+git pull origin master
+
+git remote add origin git@github
+
+### Splitting up the work
+* Horizontal
+* Vertical
+* Pair programming
+
+### Deployment
+* Not a requirement
+* Heroku
+
+### Communication
+* Please communicate
+
+### Kanban
+* To do, in progress, complete
+* Trello
 
 
 
