@@ -1,65 +1,60 @@
 # W05D05 - Mid-term Project Kickoff
 
-### Outcomes
-* Much closer to a real-life experience
-* Learn to work as a team
-* Solidify your learnings
-
-* merge conflicts
-
 ### Pick a Project
+- Wiki Map
+- Quiz App
+- Story Creator
+- Decision Maker
+- PasswordKeepR
+- Smart TODO List
+- Resource Wall
+- Buy/Sell Listing Website
+- Schoodle
+- Food Pick-up Ordering
 
 ### User Stories
-* user stories describe how a user uses our app
+- A _user story_ describes how users will interact with your application
+- They have the form: As a ______, I want to ______, because ______.
+- eg. As a _user_, I want to _be able to save posts_, because _I want to review them later_.
+- User stories can also be negated: As a _____, I shouldn't be able to ______, because _____.
+- eg. As a _user_, I shouldn't be able to _edit other users posts_, because _I don't own those posts_.
 
-* As a _____, I can _____, because _____
-* As a logged in user, I can favourite a blog post, because I want to read it later
-* As a user, I can see a list of maps, because I want to whats available in my area
+### User Scenarios
+- A _user scenario_ is a syntactic alternative to user stories
+- They have the form: Given _____, when ______, then ______.
+- eg. Given _that I am logged in_, when _I click favourite on a post_, then _it is added to my favourites_.
+- You can also chain on an _and_ to user stories/scenarios
+- eg. Given _that I am logged in_, when _I click favourite on a post_, then _it is added to my favourites_ **and** _the save icon will change to indicate success_.
 
-* As a non-logged in user, I cannot favourite a map, because I'm not allowed to
-
-* As a logged in user, I can favourite a blog post, because I want to read it later AND the heart icon turns red
-
-### Nouns become Entities
-* Turn user stories into an ERD
+### ERD
+- The user stories provide you with nouns (eg. user, posts, favourites)
+- Use these nouns/entities to build out your database (ie. tables are the nouns from the stories)
 
 ### Routes
-* Build BREAD routes for each resource
-* REpresentational State Transfer
+- Once you know the resources that you'll have, write out the routes that you'll need to perform BREAD operations on those resources
+- Remember RESTful conventions (they make it much easier)
 
-GET /users/:id/maps
-GET /users/:id/maps/:map_id
-GET /users/:id/favourites
+### MVP vs MVD
+- There is a concept in development of an MVP, the Minimum Viable Product
+- An MVP has just enough features to be useful to a user
+- This concept helps streamline the development process and help keep the team on target
+- For mid-terms, we want to focus on the MVD, the Minimum Viable Demo
+- **If you aren't going to demo it, don't build it**
 
-GET /resources/new
-GET /resources/:id/edit
-
-B GET   /resources
-R GET   /resources/:id
-E POST  /resources/:id
-A POST  /resources
-D POST  /resources/:id/delete
-D DELETE /resources/:id
-
-### MVP
-* Minimum Viable Product
-* Minimum Viable Demo (MVD)
-* If you're not going to demo it, DON'T BUILD IT
-
-### Front-end Wireframes/Mockups
-* moqups
-* balsamiq
-* draw.io
-* pen and paper
-* figma
+### Wireframes
+- Draw out the structure of your web pages
+- This will make it much easier to build out these pages later
+- This is also a great opportunity to get input from all of the team members
+- Design matters... however you are a developer, not a designer
+- Get inspiration from websites you visit
 
 ### User Login
-* Don't do it
-
-/login/7
-/login/12
+- Don't do it
+- Seriously, don't do it
+- We know that you know how to register and login users
 
 ```js
+// do this instead
 app.get('/login/:id', (req, res) => {
   req.session.user_id = req.params.id;
   res.redirect('/');
@@ -67,52 +62,37 @@ app.get('/login/:id', (req, res) => {
 ```
 
 ### Tech Choices
-* BE === Node/Express/Postgres
-* FE === HTML/CSS/JS/jQuery/Bootstrap/Flexbox/SCSS
+- We have made all the tech choices for you
+- Back End: Node and Express
+- Front End: HTML, CSS, JS, jQuery, Bootstrap
 
+### The Mid-term Skeleton
+- Use the provided `node-skeleton` as a template for your project
+- This will get you up and running quickly
 
-### SPA vs Multi-page
-* Not mutually exclusive
+### SPA vs Multi-page App
+- These concepts are not mutually exclusive
+- You can choose one or the other or both
 
 ### Git
-* Use branches
-* I WILL NOT CODE ON MASTER
-* Choose where the merges happen (locally or in the cloud)
+- Use Git best practices (ask a mentor for clarification if you need it)
+- Use branches
 
-* Work on your branch
+### DO NOT CODE ON MASTER
+- I repeat, do not code on master
 
-* Save your branch (commit)
-* Checkout master
-* Pull latest
-* Checkout branch
-* Merge master into branch
-
-git push origin master
-git push origin my-branch
-
-git pull origin master
-
-git remote add origin git@github
-
-### Splitting up the work
-* Horizontal
-* Vertical
-* Pair programming
-
-### Deployment
-* Not a requirement
-* Heroku
+### Splitting up the Work
+- Horizontally - whole team working on front-end or back-end at the same time
+- Vertically - divide the work between front-end and back-end
+- Pair Programming - working together on the same tasks
 
 ### Communication
-* Please communicate
+- Make sure to communicate with your team members
+- Use Slack, iMessage, Google Hangouts, whatever... just make sure that everyone is on the same page
 
-### Kanban
-* To do, in progress, complete
-* Trello
+### Github Projects
+- Github has a built-in project board (similar to a kanban board)
 
-
-
-
-
-
-# 
+### Deployment
+- Decide if you want/need to deploy your application to the cloud
+- Ask a mentor for assistance/advice if your team decides to deploy
