@@ -15,7 +15,7 @@
 ![Postman interface](https://raw.githubusercontent.com/andydlindsay/aug172020/master/breakout-postman/postman-interface.png)
 
 ### More Features
-* Beyond the basics, Postman includes a ton of extra features such as:
+* Postman includes a host of extra features such as:
   * Create documentation for your API
   * Different environments for testing, production, development, etc
   * Automated testing
