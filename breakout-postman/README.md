@@ -12,7 +12,7 @@
 * HTTP requests can be quickly created using the Postman interface
 * Created requests can be saved for later, added to a workspace, and/or shared with teammates
 
-![Postman interface]()
+![Postman interface](https://raw.githubusercontent.com/andydlindsay/aug172020/master/breakout-postman/postman-interface.png)
 
 ### More Features
 * Beyond the basics, Postman includes a ton of extra features such as:
