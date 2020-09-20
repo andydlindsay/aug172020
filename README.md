@@ -14,3 +14,4 @@
 * [W05D03 - SQL from our Apps](https://github.com/andydlindsay/aug172020/tree/master/w05d03)
 * [W05D05 - Mid-term Project Kickoff](https://github.com/andydlindsay/aug172020/tree/master/w05d05)
 * [BREAKOUT - Express Router](https://github.com/andydlindsay/aug172020/tree/master/breakout-express-router)
+* [BREAKOUT - Postman](https://github.com/andydlindsay/aug172020/tree/master/breakout-postman)
