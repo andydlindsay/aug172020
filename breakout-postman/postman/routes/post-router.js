@@ -29,13 +29,38 @@ const postRouter = (db) => {
   // POST /posts
   router.post('/', (req, res) => {
     const {user_id, title, content} = req.body;
-    const query = 'INSERT INTO posts(user_id, title, content) VALUES($1, $2, $3);';
+    const query = 'INSERT INTO posts(user_id, title, content) VALUES($1, $2, $3) RETURNING *;';
     db.query(query, [user_id, title, content])
+      .then((response) => {
+        res.json({ success: true, post: response.rows[0] });
+      })
+      .catch((err) => {
+        res.json({ success: false, error: err });
+      });
+  });
+
+  // PUT /posts/:id
+  router.patch('/:id', (req, res) => {
+    const {title, content} = req.body;
+    const query = 'UPDATE posts SET title = $1, content = $2 WHERE id = $3 RETURNING *;';
+    db.query(query, [title, content, req.params.id])
+      .then((response) => {
+        res.json({ success: true, post: response.rows[0] });
+      })
+      .catch((err) => {
+        res.json({ success: false, error: err });
+      });
+  });
+
+  // DELETE /posts/:id
+  router.delete('/:id', (req, res) => {
+    const query = 'DELETE FROM posts WHERE id = $1;';
+    db.query(query, [req.params.id])
       .then(() => {
         res.json({ success: true });
       })
-      .catch(() => {
-        res.json({ success: false });
+      .catch((err) => {
+        res.json({ success: false, error: err });
       });
   });
 
