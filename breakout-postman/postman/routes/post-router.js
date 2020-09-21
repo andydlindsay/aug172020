@@ -39,7 +39,7 @@ const postRouter = (db) => {
       });
   });
 
-  // PUT /posts/:id
+  // PATCH /posts/:id
   router.patch('/:id', (req, res) => {
     const {title, content} = req.body;
     const query = 'UPDATE posts SET title = $1, content = $2 WHERE id = $3 RETURNING *;';
@@ -53,6 +53,7 @@ const postRouter = (db) => {
   });
 
   // DELETE /posts/:id
+  // POST /posts/:id/delete
   router.delete('/:id', (req, res) => {
     const query = 'DELETE FROM posts WHERE id = $1;';
     db.query(query, [req.params.id])
