@@ -15,3 +15,4 @@
 * [W05D05 - Mid-term Project Kickoff](https://github.com/andydlindsay/aug172020/tree/master/w05d05)
 * [BREAKOUT - Express Router](https://github.com/andydlindsay/aug172020/tree/master/breakout-express-router)
 * [BREAKOUT - Postman](https://github.com/andydlindsay/aug172020/tree/master/breakout-postman)
+* [W07D01 - Component-Based UI w/ React](https://github.com/andydlindsay/aug172020/tree/master/w07d01)
