@@ -16,3 +16,4 @@
 * [BREAKOUT - Express Router](https://github.com/andydlindsay/aug172020/tree/master/breakout-express-router)
 * [BREAKOUT - Postman](https://github.com/andydlindsay/aug172020/tree/master/breakout-postman)
 * [W07D01 - Component-Based UI w/ React](https://github.com/andydlindsay/aug172020/tree/master/w07d01)
+* [W07D03 - Data Fetching & Other Side Effects](https://github.com/andydlindsay/aug172020/tree/master/w07d03)
